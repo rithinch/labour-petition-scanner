@@ -59,7 +59,7 @@ with tab1:
         render_results(response)
 
         #st.json(response)
-        
+
     else:
          
          with st.expander(f'⚠️ Disclaimer: Accuracy and Verification', expanded=False):
@@ -73,7 +73,7 @@ with tab2:
     if img_file_buffer is not None:
 
         bytes_data = img_file_buffer.getvalue()
-        response = get_open_ai_response(bytes_data, uploaded_file.type)
+        response = get_open_ai_response(bytes_data, img_file_buffer.type)
         text_spinner_placeholder = st.empty()
 
         if not (response):
