@@ -11,6 +11,8 @@ locale.setlocale(locale.LC_ALL, '')
 load_dotenv()
 api_key = os.environ.get("OPENAI_API_KEY")
 
+if not api_key:
+    api_key = st.secrets["OPENAI_API_KEY"]
 
 #base_api_url = "http://localhost:7071"
 
